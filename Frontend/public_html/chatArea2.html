@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>
+HTML Test Page
+</TITLE>
+
+
+
+
+<SCRIPT language="JavaScript">
+<!--	
+
+function test()
+{
+	alert("Test");
+}
+
+function displayInventory(entityId, parameters)
+{
+	parent.combatframe.showStatPanel(entityId, parameters)
+}
+
+function requestAction(id, posX, posY)
+{
+	//alert(id + " " + posX + " " + posY);  
+  parent.combatframe.requestAction(id, posX, posY);
+}
+
+function removeEntity(attacker, defender)
+{
+  parent.combatframe.removeCombatTile(attacker, defender);
+}
+
+function refreshClient()
+{
+	//alert("wait");
+	//alert(document.applets[0].actionGetCombatants());
+	
+	parent.combatframe.initializeCombat(document.applets[0].actionGetCombatants());
+	//parent.combatframe.refreshCombat();
+	
+	
+}
+
+function createPlayfield(sizeX, sizeY)
+{
+	parent.combatframe.createPlayfield(sizeX, sizeY);
+}
+
+function defineRoom(roomString)
+{
+	parent.combatframe.defineRoom(roomString);
+}
+
+function nocontextmenu() {
+  event.cancelBubble = true, event.returnValue = false;
+
+  return false;
+} 
+
+
+
+
+
+document.oncontextmenu = nocontextmenu;
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY leftmargin="0" topmargin="0" bgcolor="#000000">
+
+
+
+<CENTER>
+<TABLE cellspacing=0 cellpadding=0 width=100%>
+<TR>
+
+<TD align="center">
+<APPLET
+  CODEBASE = "./applets"
+  A_RCHIVE  = "applets.jar"
+  CODE     = "client.ClientInterface.class"
+  NAME     = "TestApplet"
+  WIDTH    = 100%
+  HEIGHT   = 300
+  HSPACE   = 0
+  VSPACE   = 0
+  ALIGN    = middle
+	MAYSCRIPT
+>
+<PARAM NAME = "locationId" VALUE = "norge1">
+<PARAM NAME = "playerId" VALUE = "sveinjo2">
+<P_ARAM NAME = "host" VALUE = "www.idi.ntnu.no">
+<PARAM NAME = "host" VALUE = "webgame">
+<P_ARAM NAME = "host" VALUE = "localhost">
+<P_ARAM NAME = "host" VALUE = "129.241.122.190">
+<PARAM NAME = "port" VALUE = "9999">
+</APPLET>
+</TD>
+
+</CENTER>
+
+</BODY>
+</HTML>
+ 

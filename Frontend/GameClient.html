@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Jbuilder Project GameClient.jpr</TITLE>
+</HEAD>
+<BODY>
+<H1>Project Notes</H1>
+<HR>
+<FONT SIZE=+1>
+<STRONG>Project:  </STRONG>Your Product Name<BR>
+<STRONG>Author: </STRONG>Your Name<BR>
+<STRONG>Company: </STRONG>Your Company<BR>
+<STRONG>Description: </STRONG><BR>
+Your description
+<HR>
+<STRONG>Things to do...</STRONG><BR>
+</FONT>
+<UL>
+<!-- Edit this section to keep track of your to do items -->
+<LI><B>Issue:</B> Location Initialization is currently hardcoded and dependent on the calling of an initialize method. It currently also doesn't know it's own size and it is called before the component has contacted the server.
+<LI><B>Security:</B> Event variables need another set of values different from SocketVariables so they can't that easily be hacked.
+<LI><FONT COLOR="aaaaaa"><B>Issue:</B> Entity (character) names are currently beginning with a space char.</FONT>
+<LI><FONT COLOR="aaaaaa"><B>Issue:</B> Applet must be the one to initialize the HTML. This must probably be done by casting an event back to the Applet class. If not the startup code needs to be cleaned up.</FONT>
+<LI><B>Issue:</B> Movement has a habit of getting unsynced when many are involved, causing a JS-Exception. Must be looked into.
+</UL>
+</BODY>
+</HTML>
+ 

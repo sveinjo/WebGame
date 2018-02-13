@@ -1,0 +1,99 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+<html>
+<head>
+
+<title>MapTest</title>
+
+<script language="JavaScript" src="js/dynlayer.js"></script>
+
+<script language="JavaScript" src="js/createdestroy.js"></script>
+
+<SCRIPT language="JavaScript">
+<!--	
+	
+	
+function createMyLayer1() {
+	createLayer('mylayer1Div',null,480,60,576,576,'This is <font size="1">mlayer1Div</font> yeah!','#C0C0C0')
+	//createLayer('mychild1Div','mylayer1Div',10,10,32,32,'<img src="square.png" border="0">','#808080')
+	mylayer1 = new DynLayer('mylayer1Div')
+}
+
+function createMapTile(iPosX, iPosY, iSize)
+{
+	size = iSize;
+	//size = 32;
+	posX = iPosX * size;
+	posY = iPosY * size;
+		
+	createLayer('mychild1Div','mylayer1Div', posX, posY, size, size,'<img src="square.png" border="0">','#808080')
+	
+}
+
+function wait(delay)
+{
+	//string="pauseforalert("+delay+");";
+	setTimeout("string",delay);
+}
+
+function pauseforalert(delay)
+{
+	alert("Ok "+delay/1000+" seconds have elapsed");
+}
+
+function test()
+{
+	alert("hei");
+}
+
+function enterLocation()
+{
+	createMyLayer1();
+	str = document.TestApplet.actionEnterArea();
+	
+	//str = "1 0 2 2 0 2";	
+	
+	strArray = str.split(" ");	
+	
+	for (var i=0; i < strArray.length; i = i + 2)
+	{		
+		createMapTile(strArray[i], strArray[i+1], 32);		
+	}	
+}
+	
+	//-->
+</SCRIPT>
+
+
+
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+
+<APPLET
+  CODEBASE = "./applets"
+  CODE     = "client.ClientInterface.class"
+  NAME     = "TestApplet"
+  WIDTH    = 400
+  HEIGHT   = 300
+  HSPACE   = 0
+  VSPACE   = 0
+  ALIGN    = middle
+>
+<PARAM NAME = "locationId" VALUE = "norge1">
+<PARAM NAME = "playerId" VALUE = "sveinjo4">
+<PARAM NAME = "host" VALUE = "127.0.0.1">
+<PARAM NAME = "port" VALUE = "2000">
+<PARAM NAME = "MAYSCRIPT" VALUE="true">
+</APPLET>
+
+<script language="JavaScript">
+	//createLayer('mylayer1Div',null,480,60,250,200,'This is <font size="1">mlayer1Div</font> yeah!','#C0C0C0')
+	//createLayer('mychild1Div','mylayer1Div',10,10,32,32,'<img src="square.png" border="0">','#808080')
+	//mylayer1 = new DynLayer('mylayer1Div')
+</script>
+<p><a onClick="javascript:enterLocation()">create mylayer1Div</a>
+---
+
+</body>
+
+</html>

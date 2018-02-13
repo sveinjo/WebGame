@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>
+HTML Test Page
+</TITLE>
+<SCRIPT SRC="scripts/domFunc.js"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+function test()
+{
+  //document.forms[0].button1.value =
+  document.TestApplet.actionSendChatMessage();
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+GameClient.ClientInterface will appear below in a Java enabled browser.<BR>
+<APPLET
+  CODEBASE = "./applets"
+  CODE     = "client.ClientInterface.class"
+  NAME     = "TestApplet"
+  WIDTH    = 400
+  HEIGHT   = 300
+  HSPACE   = 0
+  VSPACE   = 0
+  ALIGN    = middle
+>
+<PARAM NAME = "locationId" VALUE = "norge1">
+<PARAM NAME = "playerId" VALUE = "sveinjo4">
+<PARAM NAME = "host" VALUE = "127.0.0.1">
+<PARAM NAME = "port" VALUE = "2000">
+</APPLET>
+
+<FORM>
+
+<input name="button1" type="button" value="Send Chatline" onClick="test()">
+</FORM>
+
+</BODY>
+</HTML>
+ 

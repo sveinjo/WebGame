@@ -1,0 +1,73 @@
+
+
+
+
+
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>
+HTML Test Page
+</TITLE>
+
+<SCRIPT SRC="scripts/domFunc.js"></SCRIPT>
+
+<STYLE type="text/css">
+
+
+</STYLE>
+
+
+
+</HEAD>
+<BODY bgcolor="#804000" Background="pictures/nwnback.jpg" text="#000000" link="#0000ff" vlink="#0000ff" alink="#0000ff">
+
+<FORM>
+
+<input type="button" value="LayOut" onClick="javascript:layOut();return(false);">
+</FORM>
+
+
+
+
+
+<STYLE type="text/css">
+
+.AlphaFilter {filter : Alpha(Opacity="0",Style="0")}
+
+#c1 {position:absolute;visibility:shown;filter:blendTrans(Duration=0.6);}
+#hp1 {position:absolute;visibility:shown;}
+
+
+
+
+
+</STYLE>
+
+
+
+<div id="c1"><img src="pictures/tiger.png" border=2 ></div>
+
+<div id="hp1"><font color="#FFFFFF"><b>10</b></font></div>
+
+<APPLET
+  CODEBASE = "./applets"
+  CODE     = "client.ClientInterface.class"
+  NAME     = "TestApplet"
+  WIDTH    = 400
+  HEIGHT   = 300
+  HSPACE   = 0
+  VSPACE   = 0
+  ALIGN    = middle
+>
+<PARAM NAME = "locationId" VALUE = "norge">
+<PARAM NAME = "playerId" VALUE = "sveinjo2">
+<PARAM NAME = "host" VALUE = "127.0.0.1">
+<PARAM NAME = "port" VALUE = "2000">
+</APPLET>
+
+<SCRIPT language="JavaScript">
+
+</SCRIPT>
+</BODY>
+</HTML>
