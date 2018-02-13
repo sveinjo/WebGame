@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Jbuilder Project encounter_handler.jpr</TITLE>
+</HEAD>
+<BODY>
+<H1>Project Notes</H1>
+<HR>
+<FONT SIZE=+1>
+<STRONG>Project:  </STRONG>Webgame<BR>
+<STRONG>Author: </STRONG>Svein-Gunnar Johansen<BR>
+<STRONG>Company: </STRONG>-<BR>
+<STRONG>Description: </STRONG><BR>
+Persistent multiplayer online combat card game.<P>
+Design Philosphy:<BR>
+- Make everything regarding syncronization and outcome a job on the server.<BR>
+- Make the client handle everything else.<BR>
+- Make as few demands on the server as possible.<BR>
+
+<HR>
+<STRONG>Things to do...</STRONG><BR>
+</FONT>
+<UL>
+<!-- Edit this section to keep track of your to do items -->
+<LI><FONT COLOR="aaaaaa"><B>Possible weakness:</B> Adding and removing players is SYNCRONIZED, and thus a possible bottleneck</FONT>
+<LI><B>Possible failure:</B> Cleaning and initialization of Chat is dependent on the safe arrival of a DATAGRAM package, and may fail. Also, try to reduce amount of parameters.
+<LI><FONT COLOR="aaaaaa"><B>Possible failure:</B> Thread list in ModelCache is not automatically cleaned, altough thread is closed.</FONT>
+<LI><B>Security issue:</B> Unautharized chatlines are recieved if they hit the right port!
+<LI><B>Security issue:</B> No encryption!
+<LI><FONT COLOR="aaaaaa"><B>Exception:</B> Trying to leave when you are not on a location!</FONT>
+<LI><B>Possible failure:</B> Socket turntaking is not entirely fool-proof yet!
+<LI><B>Restriction issue:</B> Client may connect several times, thus creating several instances. Must be cleaned!
+<LI><B>Possible weakness:</B> Defining room is SYNCRONIZED, and thus a possible bottleneck
+<LI><B>Exception:</B> Tries to stop thread a second time upon closing browser when having already left!
+<LI><B>Issue:</B> Illegal move actions are treated as non actions. Should be refined and generalized.
+<LI><FONT COLOR="aaaaaa"><B>Issue Initiative:</B> Initiative is highly temporary. Needs to be properly implemented.</FONT>
+<LI><B>Issue Initiative:</B> Initiative may overflow if the battle goes on and on. Needs to be reduced at certain intervals. Also may not be too random in event of a tie. Look into the possibility of same time actions.
+<LI><B>Issue Attack:</B> Range calculations for attack may need to be modified if diagonal turning is to be disregarded, or else blind spots may occur in standard surrond protection (or maybe this is a good thing).
+<LI><B>Issue Inventory:</B> Equipment assignments need to check wether someone is allready using that inventory item.
+<LI><B>Issue:</B> Fikse slik at turns går videre når noen avslutter, evt. at turn settes til auto. Model må fjernes fra cache når alle players er ute fortsatt.
+<LI><B>Issue Inventory:</B> Fikse slik at inventory kan aksesseres out of turn (involverer måten requestActions blir tilatt på. Mest sannsynlig må actions være lovlige hele tiden, mens det nå kun er lovlig på player-turn. Mest sannsynlig vil dette være mulig, men da må alle actions være selv-syncroniserende. Nå er det denne rutinen som "hardhendt" sørger for at man ikke går out of sync).
+<LI><FONT COLOR="aaaaaa"><B>Feature:</B> Needs another socket in order to accomodate non requested events (this is not needed for combat). Might also be used for chat initialization.</FONT>
+
+</UL>
+</BODY>
+</HTML>
