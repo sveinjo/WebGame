@@ -1,0 +1,26 @@
+Specification:
+
+Participant data:
+
+
+integer() - team number
+integer() - posX
+integer() - posY
+string() - character/monster name (In single quotes '---')
+integer() - current hit points
+integer() - max hitpoints
+integer() - armor class
+integer() - hit rank
+integer() - initiative
+integer() - weapon type
+
+boolean (01) - character/monster flag:
+integer() - row number (0 front --> X back)
+//0 0 0 'Ballog' 9 10 5 20 0 1,0 1 0 'Roland' 9 10 5 20 0 1
+
+
+7 5 99999999000009900000990000099999999 
+
+Ideer:
+
+Høyere graderte utøver må slåss mot en sentral datastyrt fiende (monster), og deretter hverandre for å vinne finaler.

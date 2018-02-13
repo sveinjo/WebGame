@@ -1,0 +1,31 @@
+Death handling:
+
+Characters who are killed are the property of arena masters, and are used as food for the wild animals. Bodies can be bought back from the masters with ingame money. Price is determined by level.
+
+Characters can be resurrected for real money. This should probably be a set amount.
+
+Alternativly bodies can be bought from masters and risen as different variations of undead. This needs more planning.
+
+The Spell commune with Dead can be used to find out the following:
+-The characters level, skills etc.
+-The cause of death
+-To chat with the original owner.
+
+Should a character be raised back to life, it will as a rule follow it's original party, if it is around. It might join the raising party otherwise.
+
+
+Initiative handling:
+
+Initiative is handled by a random number + Agility bonus. The lower the better. If a tie occurs, the one with the best agility wns. If there still is a tie, random chance decides. Nobody may act at the same time. 
+
+For each "tie", a counter is added to initiative of those who hasn't acted yet. At the next round this counter is reset.
+
+
+Actions:
+
+Attacking, Defending, Casting a Spell and Moving to the Max are considered final actions. A turn ends at a final action.
+
+
+Siginificant Events in the world:
+
+When something of particular importance happens to the world at large, an "active time event" is issued, informing players of the event in question. Those who wish may watch the event, Live, or evt. as a recording (Told by a bard/storyteller).
